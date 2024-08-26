@@ -1,0 +1,16 @@
+word = input("Enter the word: ")
+repeated_letters = {}
+for letter in word:
+    if letter in repeated_letters:
+        repeated_letters[letter] += 1
+    else:
+        repeated_letters[letter] = 1
+repeated = {k: v for k, v in repeated_letters.items() if v > 1}
+print("Number of repeated letters =", len(repeated))
+if repeated:
+    print("Repeated letter =", ', '.join(repeated.keys()))
+
+s = "egg"
+t = "add"
+is_isomorphic = len(s) == len(t) and all(s.index(s[i]) == t.index(t[i]) for i in range(len(s)))
+print(is_isomorphic)
