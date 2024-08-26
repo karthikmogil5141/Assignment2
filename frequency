@@ -1,0 +1,10 @@
+def modify_string(S):
+    from collections import Counter
+
+    freq = Counter(S)
+    modified_string = ''.join(chr((ord(char) - ord('a') + freq[char]) % 26 + ord('a')) for char in S)
+    return modified_string
+
+S = "ghee"
+output = modify_string(S)
+print(output)
