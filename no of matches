@@ -1,0 +1,7 @@
+def count_matching_characters(s1, s2):
+    return sum(1 for a, b in zip(s1, s2) if a == b)
+
+S1 = "what"
+S2 = "watch"
+result = count_matching_characters(S1, S2)
+print(result)
